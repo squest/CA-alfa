@@ -20,6 +20,11 @@
    :user        "root"
    :host        ["128.199.252.210" 8528]})
 
+(def local-do-config
+  {:useProtocol Protocol/VST
+   :user        "root"
+   :host        ["127.0.0.1" 8528]})
+
 (defn connect!
   ([config]
    (reset! conn (a/connect config)))
